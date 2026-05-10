@@ -3,6 +3,7 @@ import Lenis from 'lenis';
 import Hero from './components/Hero';
 import Sustainability from './components/Sustainability';
 import Services from './components/Services';
+import FarmLandscape from './components/FarmLandscape';
 import WhyChooseUs from './components/WhyChooseUs';
 import IndustriesServed from './components/IndustriesServed';
 import ProcessTimeline from './components/ProcessTimeline';
@@ -38,6 +39,7 @@ function App() {
         <Hero />
         <Sustainability />
         <Services />
+        <FarmLandscape />
         <WhyChooseUs />
         <IndustriesServed />
         <ProcessTimeline />

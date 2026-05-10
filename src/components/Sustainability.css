@@ -1,0 +1,171 @@
+.sustainability-section {
+  position: relative;
+  background: var(--bg-base);
+  z-index: 10;
+  padding-bottom: 160px;
+}
+
+.video-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, transparent 20%, transparent 80%, var(--bg-base) 100%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.intro-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.sustainability-cards-container {
+  max-width: 1200px;
+  margin: 100px auto 0;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.sus-card-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+/* Asymmetrical Floating Layout */
+.sus-card-wrapper.left {
+  justify-content: flex-start;
+}
+
+.sus-card-wrapper.right {
+  justify-content: flex-end;
+}
+
+/* Slight offsets to avoid perfect grid alignment */
+.sus-card-wrapper:nth-child(3) {
+  padding-left: 8%;
+}
+
+.sus-card-wrapper:nth-child(4) {
+  padding-right: 8%;
+}
+
+.sus-card-wrapper:nth-child(5) {
+  padding-left: 4%;
+}
+
+.sus-card-wrapper:nth-child(6) {
+  padding-right: 4%;
+}
+
+/* Card Styling */
+.sus-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: 32px;
+  padding: 56px;
+  max-width: 580px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.sus-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon with soft green glow */
+.sus-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-base);
+  color: var(--grass-green);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02), 0 12px 24px var(--green-glow);
+  position: relative;
+  z-index: 2;
+}
+
+/* Background Number */
+.sus-number {
+  font-size: 120px;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.02);
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  line-height: 1;
+  letter-spacing: -6px;
+  z-index: 1;
+  user-select: none;
+}
+
+.sus-content {
+  position: relative;
+  z-index: 2;
+}
+
+.sus-title {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.sus-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+  .sus-card-wrapper:nth-child(n) {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .sustainability-cards-container {
+    gap: 60px;
+    margin-top: 60px;
+  }
+  
+  .sus-card-wrapper.left,
+  .sus-card-wrapper.right {
+    justify-content: center;
+  }
+
+  .sus-card {
+    padding: 40px 32px;
+  }
+  
+  .sus-number {
+    font-size: 80px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .sus-title {
+    font-size: 28px;
+  }
+
+  .sus-desc {
+    font-size: 16px;
+  }
+}

@@ -118,7 +118,7 @@ function ServiceCard({ service, index }) {
 
 export default function Services() {
   return (
-    <section id="services" style={{ padding: '160px 48px', maxWidth: '1400px', margin: '0 auto' }}>
+    <section id="services" style={{ padding: '160px 48px 80px 48px', maxWidth: '1400px', margin: '0 auto' }}>
       <div className="section-header">
         <motion.span 
           initial={{ opacity: 0, y: 20 }}

@@ -38,7 +38,7 @@ function AnimatedCounter({ to }) {
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" style={{ padding: '160px 48px', maxWidth: '1400px', margin: '0 auto' }}>
+    <section id="why-us" style={{ padding: '80px 48px 160px 48px', maxWidth: '1400px', margin: '0 auto' }}>
       <div className="section-header">
         <motion.span 
           initial={{ opacity: 0, y: 20 }}
